@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 这个 meta 标签设置了一个内容安全策略（Content Security Policy, CSP） -->
+    <!-- 它用于指定哪些类型的内容可以从何处加载，以此来增强网页或应用的安全性 -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+            default-src 'self';
+            style-src 'self' 'unsafe-inline' https://maxcdn.bootstrapcdn.com https://cdn.jsdelivr.net;
+            font-src 'self' https://maxcdn.bootstrapcdn.com https://cdn.jsdelivr.net;
+            connect-src 'self' https://cdn.jsdelivr.net;
+            img-src 'self' https://xiejie-typora.oss-cn-chengdu.aliyuncs.com;
+        "
+    />
+    <title>Markdown文档编辑器</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/simplemde/dist/simplemde.min.css"
+    />
+    <link rel="stylesheet" href="./window.css">
+    <!-- 提前请求字体资源，从而加速字体加载 -->
+    <link
+      rel="preload"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/fonts/fontawesome-webfont.woff2?v=4.7.0"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <textarea id="editor"></textarea>
+    <script src="./window.js"></script>
+  </body>
+</html>

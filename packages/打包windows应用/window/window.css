@@ -1,0 +1,11 @@
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.CodeMirror {
+  flex: 1;
+}

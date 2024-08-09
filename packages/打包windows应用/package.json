@@ -1,0 +1,47 @@
+{
+  "name": "markdowneditor",
+  "productName": "DuyiEditor",
+  "author":"jie xie",
+  "version": "1.0.0",
+  "description": "this is a test project",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production electron .",
+    "dev": "cross-env NODE_ENV=development electron .",
+    "build": "electron-builder",
+    "build-icon": "electron-icon-builder --input=./assets/markdown.png --flatten"
+  },
+  "build": {
+    "appId": "com.yourcompany.markdowneditor",
+    "productName": "MarkdownEditor",
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "msi"
+      ],
+      "icon": "./icons/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^28.1.1",
+    "electron-builder": "^24.9.1",
+    "electron-reload": "^2.0.0-alpha.1",
+    "nodemon": "^3.0.3"
+  },
+  "dependencies": {
+    "simplemde": "^1.11.2"
+  }
+}
