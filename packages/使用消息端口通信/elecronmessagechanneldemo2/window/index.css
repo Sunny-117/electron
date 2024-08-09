@@ -1,0 +1,19 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+#data-display {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #0078d4;
+}
