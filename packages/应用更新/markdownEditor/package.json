@@ -1,0 +1,62 @@
+{
+  "name": "markdowneditor",
+  "version": "1.0.1",
+  "description": "this is a simple markdown editor",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production electron .",
+    "dev": "nodemon --exec NODE_ENV=development electron . --watch ./ --ext .js",
+    "build-icon": "electron-icon-builder --input=./assets/markdown.png --flatten",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.duyi.markdown",
+    "productName": "Markdown Editor",
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://127.0.0.1:3000/"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "dmg": {
+      "title": "Markdown Editor",
+      "icon": "./icons",
+      "background": "./assets/background.jpeg",
+      "window": {
+        "width": 660,
+        "height": 400
+      },
+      "contents": [
+        {
+          "x": 180,
+          "y": 170
+        },
+        {
+          "x": 480,
+          "y": 170,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "pkg": {
+      "installLocation": "/Applications"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-updater": "^6.1.8",
+    "simplemde": "^1.11.2"
+  },
+  "devDependencies": {
+    "electron": "^28.1.4",
+    "electron-builder": "^24.9.1",
+    "electron-icon-builder": "^2.0.1",
+    "nodemon": "^3.0.3"
+  }
+}

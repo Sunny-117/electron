@@ -1,0 +1,11 @@
+version: 1.0.1
+files:
+  - url: Markdown Editor-1.0.1-arm64-mac.zip
+    sha512: N9hHpk16IlKqtqehgCaXSOJcyX9iFl5Dco3YM14plVNPICpY4nH6bYDlabdMSW+eaCceTrtAdlSvE9aTsQfA1A==
+    size: 94319192
+  - url: Markdown Editor-1.0.1-arm64.dmg
+    sha512: NPO4qNfY3NtrmKeX0omw03G/IXCDcQIv69tpzOrWvsW1zZgKgIrVvQJwqVGovbX8jLqf9pmhD3Kh8oSTtqXx0A==
+    size: 99091362
+path: Markdown Editor-1.0.1-arm64-mac.zip
+sha512: N9hHpk16IlKqtqehgCaXSOJcyX9iFl5Dco3YM14plVNPICpY4nH6bYDlabdMSW+eaCceTrtAdlSvE9aTsQfA1A==
+releaseDate: '2024-02-28T15:26:31.242Z'
