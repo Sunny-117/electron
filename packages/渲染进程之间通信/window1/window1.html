@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 该 meta 内容用于定义该渲染进程的一个安全策略 -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>窗口1</title>
+  </head>
+  <body>
+    <h1>窗口1</h1>
+    <p>接收窗口2传递过来的数据</p>
+    <p>当前的数据为：<span id="content"></span></p>
+    <script src="./window1.js"></script>
+  </body>
+</html>
