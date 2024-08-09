@@ -1,0 +1,62 @@
+@import url('./font-face.css');
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-1: #252525;
+  --bg-2: #b80065;
+  --bg-3: rgba(255, 255, 255, 0.5);
+  --bg-4: #ae0160;
+  --white: #fff;
+  --gray: #b3b3b3;
+  --gray2: #585656;
+  --black: #252525;
+  --fontColor: #f1c8cf;
+  --fontName: 'Poppins', sans-serif;
+}
+
+html {
+  font-family: var(--fontName);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-1);
+}
+
+img {
+  width: 100%;
+}
+
+/* 页面过渡样式 */
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s;
+}
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(100%);
+}
+.slide-leave-from,
+.slide-enter-to {
+  transform: translateX(0);
+}
+
+/* 反向动画 */
+.slide-back-enter-active,
+.slide-back-leave-active {
+  transition: transform 0.3s;
+}
+.slide-back-enter-from,
+.slide-back-leave-to {
+  transform: translateX(-100%);
+}
+.slide-back-leave-from,
+.slide-back-enter-to {
+  transform: translateX(0);
+}
