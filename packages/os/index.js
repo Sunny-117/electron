@@ -8,6 +8,7 @@ const createWindow = () => {
     webPreferences: {
       nodeIntegration: true, // 允许在渲染进程（在窗口）里面使用 node.js
       contextIsolation: false, // 关闭上下文隔离
+      webviewTag: true, // 允许使用 <webview> 标签
     },
   });
   win.loadFile("index.html");
