@@ -37,6 +37,14 @@ importers:
       electron-reload: 2.0.0-alpha.1
       nodemon: 3.1.4
 
+  packages/制作桌面时钟挂件/clockapplet:
+    specifiers:
+      electron: ^28.0.0
+      electron-reload: ^2.0.0-alpha.1
+    devDependencies:
+      electron: 28.3.3
+      electron-reload: 2.0.0-alpha.1
+
   packages/快速上手:
     specifiers:
       electron: ^28.1.0

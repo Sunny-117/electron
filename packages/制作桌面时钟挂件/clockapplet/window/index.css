@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* body 设置为弹性盒子，可以让时钟容器居中 */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  /* background: #091921; */
+}
+
+/* 时钟容器 */
+.clock {
+  width: 260px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 这里设置为弹性盒，是为了让所有的盒子居中显示
+      如果去除这里的弹性盒，所有时分秒盒子定位将定在该容器的左上角 */
+  background: url("../assets/clock.png") no-repeat center/cover;
+  background-color: #091921;
+  border-radius: 50%;
+  border: 3px solid #091921;
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+    inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+    0 15px 15px rgba(0, 0, 0, 0.05), inset 0 15px 15px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+/* 制作时钟中间的小圆点 */
+.clock::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+/* 时针、分针、秒针容器盒子的公共样式 */
+.hour,
+.min,
+.sec {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  /* 设置为弹性盒子，是为了让伪元素制作的时针、分针、秒针居中显示 */
+}
+
+/* 时针的容器 */
+.hour {
+  width: 160px;
+  height: 160px;
+  /* outline: 1px solid red; */
+}
+
+/* 时针，利用伪元素来进行制作 */
+.hour::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background: #ff105e;
+  z-index: 10;
+  /* 时针的 z-index 应该设置为最低 */
+  border-radius: 6px 6px 0 0;
+}
+
+/* 分针的容器 */
+.min {
+  width: 190px;
+  height: 190px;
+  /* outline: 1px solid blue; */
+}
+
+/* 分针，利用伪元素来进行制作 */
+.min::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background: #fff;
+  z-index: 11;
+  /* 分针的 z-index 应该比时针高，但是比秒针低 */
+  border-radius: 6px 6px 0 0;
+}
+
+/* 秒针的容器 */
+.sec {
+  width: 230px;
+  height: 230px;
+  /* outline: 1px solid yellow; */
+}
+
+/* 秒针，利用伪元素来进行制作 */
+.sec::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: #fff;
+  z-index: 12;
+  /* 秒针的 z-index 应该最高 */
+  border-radius: 6px 6px 0 0;
+}
