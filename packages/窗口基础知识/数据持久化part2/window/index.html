@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Electron Demo</title>
+  </head>
+  <body>
+    <h1>用户偏好</h1>
+    <div>
+      <label for="themeColor">主题颜色</label>
+      <input type="color" id="themeColor" />
+    </div>
+    <div>
+      <label for="fontSize">字体大小</label>
+      <input type="number" id="fontSize" placeholder="请输入字体大小" />
+    </div>
+    <button id="saveBtn">存储用户偏好</button>
+    <button id="loadBtn">加载用户偏好</button>
+    <div>
+      <h2>用户偏好测试</h2>
+      <textarea
+        name="textInput"
+        id="textInput"
+        cols="50"
+        rows="10"
+        placeholder="请输入测试文本..."
+      ></textarea>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
