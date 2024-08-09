@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:;"
+    />
+    <title>Electron Demo</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- 关于屏幕截图的原理 -->
+    <!-- 回头我们会使用到一个 Electron 提供的 API 叫做 desktopCapturer
+    这个 API 可以用来捕获屏幕上的图像和视频流。
+    我们会使用这个 API 来捕获屏幕上的图像，接下来我们将图像写入到一个 canvas 元素中。
+    再通过 canvas 转换为图片的方式来保存截图。
+    使用 canvas 还有一个好处，就是我们可以对图像进行一些处理，比如添加水印、文字、画线等。 -->
+    <canvas id="screen-shot"></canvas>
+    <button class="btn" id="save-btn">保存截图</button>
+    <button class="btn" id="close-btn">放弃保存</button>
+    <script src="./index.js"></script>
+  </body>
+</html>
