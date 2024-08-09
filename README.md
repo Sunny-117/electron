@@ -114,3 +114,23 @@
 
 
 
+**TODO**
+
+- Electron和不同构建工具的融合
+  - webpack
+  - rollup
+  - ....
+- Electron和其他现代前端开发技术的融合
+  - React
+  - Svelte
+  - Nuxt.js
+  - Next.js
+  - ....
+- 原生模块
+  - Windows系统的注册表
+  - 调用本地代码
+    - node-ffi：这是一个第三方模块，允许开发者直接通过 JavaScript 语法去调用动态链接库。
+    - N-API：V8引擎提供的，让开发者是在在 Node.js 中调用 C++ 实现的模块。
+  - 使用 C++ 编写一个原生模块，供你的 Electron 应用使用
+  - Electron 和 Qt 的整合
+- 应用的签名和分发

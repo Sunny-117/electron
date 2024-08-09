@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; connect-src 'self' http://localhost:9000 ws://localhost:9000"
+    />
+    <title>Electron Demo</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="my-peer-id">我的PeerID：<span id="peer-id-display"></span></div>
+    <h1>WebRTC示例演示</h1>
+    <input
+      type="text"
+      name="username"
+      id="username"
+      placeholder="请输入你的昵称"
+    />
+    <input
+      type="text"
+      name="peer-id"
+      id="peer-id"
+      placeholder="请输入对方的PeerID"
+    />
+    <button id="connect">连接</button>
+    <button id="disconnect" disabled>断开连接</button>
+    <div id="status"></div>
+    <textarea
+      name="messages"
+      id="messages"
+      cols="30"
+      rows="10"
+      placeholder="请输入你的聊天内容"
+    ></textarea>
+    <button id="send">发送消息</button>
+    <!-- 显示聊天内容 -->
+    <div id="received-messages" class="chat-container"></div>
+    <script src="./dom.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

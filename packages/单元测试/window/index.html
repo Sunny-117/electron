@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Electron Demo</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <h1>待办事项</h1>
+    <input
+      type="text"
+      name="todoInput"
+      id="todoInput"
+      placeholder="请输入新的任务..."
+    />
+    <button id="addTodoBtn">添加任务</button>
+    <ul id="todoList"></ul>
+    <!-- 更新某一个待办事项，一开始不显示，只有用户点击更新的时候，这部分内容才显示 -->
+    <div id="customPrompt">
+      <input type="text" name="customPromptInput" id="customPromptInput" />
+      <button id="customPromptOk">确认修改</button>
+      <button id="customPromptCancel">取消修改</button>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

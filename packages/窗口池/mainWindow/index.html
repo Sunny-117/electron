@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>窗口池Demo</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <h1 class="title">窗口控制中心</h1>
+    <div class="input-container">
+      <div class="input-row">
+        <div class="input-field">
+          <label for="width">窗口宽度：</label>
+          <input type="text" id="width" placeholder="默认值为300" />
+        </div>
+        <div class="input-field">
+          <label for="x-position">窗口初始 x 位置：</label>
+          <input type="text" id="x-position" placeholder="默认值为100" />
+        </div>
+      </div>
+      <div class="input-row">
+        <div class="input-field">
+          <label for="height">窗口高度：</label>
+          <input type="text" id="height" placeholder="默认值为300" />
+        </div>
+        <div class="input-field">
+          <label for="y-position">窗口初始 y 位置：</label>
+          <input type="text" id="y-position" placeholder="默认值为100" />
+        </div>
+      </div>
+      <div class="input-field full-width">
+        <label for="url">加载URL：</label>
+        <input type="text" id="url" placeholder="未填写则加载默认页面" />
+      </div>
+    </div>
+    <div class="btn-container">
+      <button id="use-win-button">使用新窗口</button>
+      <button id="create-new-win-button">窗口池放入新窗口</button>
+    </div>
+    <ul class="pool-info">
+      <li class="window-count">窗口池窗口数量：<span id="count"></span></li>
+      <li class="window-list-label">窗口列表：</li>
+      <ul id="window-list" class="window-list"></ul>
+    </ul>
+    <script src="./index.js"></script>
+  </body>
+</html>
