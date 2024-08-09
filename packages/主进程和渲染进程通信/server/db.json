@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "name": "sunny-117",
+      "age": "18",
+      "phone": "333-444-555",
+      "email": "sunny-117@gmail.com",
+      "education": "adsfasfd",
+      "graduationschool": "asdfasfd",
+      "profession": "asdfasdf",
+      "profile": "asdfasfdasdf",
+      "id": 1
+    }
+  ]
+}
