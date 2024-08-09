@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 该 meta 内容用于定义该渲染进程的一个安全策略 -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" href="./index.css">
+    <title>对话框示例</title>
+  </head>
+  <body>
+    <h1>系统对话框</h1>
+    <button id="btn">打开对话框窗口</button>
+    <!-- 右键菜单 -->
+    <div id="menu">
+      <div class="menu">功能1</div>
+      <div class="menu">功能2</div>
+      <div class="menu">功能3</div>
+      <div class="menu">功能4</div>
+      <div class="menu">功能5</div>
+      <div class="menu">功能6</div>
+    </div>
+    <div>
+      激活码： <span id="copyText">asdasdvfebesdfsdf-sdfsdfs-123sdfsdfs</span>
+      <button id="copyBtn">复制激活码</button>
+    </div>
+    <button id="notifyBtn">发送通知消息</button>
+    <script src="./window.js"></script>
+  </body>
+</html>
