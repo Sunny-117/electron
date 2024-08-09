@@ -77,6 +77,16 @@ importers:
     devDependencies:
       electron: 28.3.3
 
+  packages/托盘计算器:
+    specifiers:
+      electron: ^28.0.0
+      electron-reload: ^2.0.0-alpha.1
+      nodemon: ^3.0.3
+    devDependencies:
+      electron: 28.3.3
+      electron-reload: 2.0.0-alpha.1
+      nodemon: 3.1.4
+
   packages/渲染进程之间通信:
     specifiers:
       electron: ^28.1.0
