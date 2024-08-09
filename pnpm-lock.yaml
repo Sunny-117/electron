@@ -98,6 +98,15 @@ importers:
     devDependencies:
       electron: 28.3.3
 
+  packages/生命周期与remote模块:
+    specifiers:
+      '@electron/remote': ^2.1.1
+      electron: ^28.0.0
+    dependencies:
+      '@electron/remote': 2.1.2_electron@28.3.3
+    devDependencies:
+      electron: 28.3.3
+
   packages/窗口基础知识:
     specifiers:
       electron: ^28.1.0
@@ -123,6 +132,19 @@ importers:
     devDependencies:
       electron: 28.3.3
 
+  packages/窗口基础知识/数据持久化part3:
+    specifiers:
+      dexie: ^3.2.4
+      electron: ^28.0.0
+      electron-reload: ^2.0.0-alpha.1
+      nodemon: ^3.0.3
+    dependencies:
+      dexie: 3.2.7
+      electron-reload: 2.0.0-alpha.1
+    devDependencies:
+      electron: 28.3.3
+      nodemon: 3.1.4
+
   packages/系统对话框与菜单:
     specifiers:
       electron: ^28.1.0
@@ -145,6 +167,15 @@ importers:
       express: 4.19.2
       multer: 1.4.5-lts.1
 
+  packages/预加载脚本与上下文隔离:
+    specifiers:
+      '@electron/remote': ^2.1.1
+      electron: ^28.0.0
+    dependencies:
+      '@electron/remote': 2.1.2_electron@28.3.3
+    devDependencies:
+      electron: 28.3.3
+
 packages:
 
   /@electron/get/2.0.3:
@@ -162,6 +193,14 @@ packages:
       global-agent: 3.0.0
     transitivePeerDependencies:
       - supports-color
+
+  /@electron/remote/2.1.2_electron@28.3.3:
+    resolution: {integrity: sha512-EPwNx+nhdrTBxyCqXt/pftoQg/ybtWDW3DUWHafejvnB1ZGGfMpv6e15D8KeempocjXe78T7WreyGGb3mlZxdA==}
+    peerDependencies:
+      electron: '>= 13.0.0'
+    dependencies:
+      electron: 28.3.3
+    dev: false
 
   /@sindresorhus/is/4.6.0:
     resolution: {integrity: sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==}
@@ -596,6 +635,11 @@ packages:
   /detect-node/2.1.0:
     resolution: {integrity: sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g==}
     optional: true
+
+  /dexie/3.2.7:
+    resolution: {integrity: sha512-2a+BXvVhY5op+smDRLxeBAivE7YcYaneXJ1la3HOkUfX9zKkE/AJ8CNgjiXbtXepFyFmJNGSbmjOwqbT749r/w==}
+    engines: {node: '>=6.0'}
+    dev: false
 
   /dot-prop/6.0.1:
     resolution: {integrity: sha512-tE7ztYzXHIeyvc7N+hR3oi7FIbf/NIjVP9hmAt3yMXzrQ072/fpjGLx2GxNxGxUl5V73MEqYzioOMoVhGMJ5cA==}
