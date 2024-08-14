@@ -1,5 +1,5 @@
 const { BrowserWindow } = require("@electron/remote");
-
+// remote模块实现跨进程访问
 const btn = document.getElementById("btn");
 btn.addEventListener("click", () => {
   const win = new BrowserWindow({

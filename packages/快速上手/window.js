@@ -29,6 +29,7 @@ document.querySelector("#totalmem span:last-child").innerHTML = convert(
   os.totalmem()
 );
 const {ipcRenderer} = require('electron')
+
 window.addEventListener('DOMContentLoaded', () =>{
   document.getElementById('cpu').innerHTML = process.version // 使用node api
   document.getElementById('send').addEventListener('click', ()=>{
@@ -37,4 +38,5 @@ window.addEventListener('DOMContentLoaded', () =>{
   ipcRenderer.on('reply-message', (event, arg) => {
     console.log(arg)
   })
+
 })
