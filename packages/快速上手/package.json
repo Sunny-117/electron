@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "nodemon --watch index.js --exec 'electron .'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^28.1.0"
+  },
+  "dependencies": {
+    "nodemon": "^3.0.3"
   }
 }

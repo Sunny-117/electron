@@ -3,13 +3,13 @@ const { app, BrowserWindow } = require("electron");
 // 创建窗口的方法
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 400,
-    height: 300,
+    width: 700,
+    height: 700,
     webPreferences: {
       nodeIntegration: true, // 允许在渲染进程（在窗口）里面使用 node.js
       contextIsolation: false, // 关闭上下文隔离
       webviewTag: true, // 允许使用 <webview> 标签
-    },
+    }
   });
   win.loadFile("index.html");
 };

@@ -28,3 +28,7 @@ document.querySelector("#freemem span:last-child").innerHTML = convert(
 document.querySelector("#totalmem span:last-child").innerHTML = convert(
   os.totalmem()
 );
+
+window.addEventListener('DOMContentLoaded', () =>{
+  document.getElementById('cpu').innerHTML = process.version // 使用node api
+})
