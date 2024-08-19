@@ -31,8 +31,11 @@
     "dev": "concurrently \"wait-on http://localhost:3000 && electron .\" \"cross-env BROWSER=NONE npm start\"",
     "build": "react-scripts build",
     "pack": "electron-builder --dir",
+    "buildMain": "webpack",
     "dist": "electron-builder",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "release": "electron-builder",
+    "prerelease": "npm run build && npm run buildMain"
   },
   "eslintConfig": {
     "extends": [
