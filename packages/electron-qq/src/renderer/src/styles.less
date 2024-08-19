@@ -1,0 +1,269 @@
+@import './assets/fonts/iconfont.css';
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Open Sans', sans-serif;
+  color: #86a5b1;
+  background-color: #2f3241;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+input,
+textarea {
+  outline: none;
+  padding: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  outline: none;
+}
+
+.dragable {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-app-region: drag;
+}
+
+.page-layout {
+  height: 100vh;
+  display: flex;
+}
+
+.layout-sidebar {
+  width: 78px;
+  padding-top: 48px;
+  background-color: #e9e4e9;
+}
+
+.layout-sidebar.win32 {
+  padding-top: 20px;
+}
+
+.layout-sidebar .user-profile {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.layout-sidebar .avatar {
+  border-radius: 50%;
+}
+
+.layout-sidebar .status {
+  position: absolute;
+  bottom: -2px;
+  right: -0px;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #e9e4e9;
+  background-color: #38e68e;
+  border-radius: 50%;
+}
+
+.layout-sidebar .menu-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.layout-sidebar .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  margin-top: 8px;
+  border-radius: 8px;
+  color: #010101;
+  font-size: 28px;
+}
+
+.layout-sidebar .menu:hover,
+.layout-sidebar .menu.active {
+  background-color: #dfdbe0;
+  color: #1996f2;
+}
+
+.layout-workbench {
+  width: 250px;
+  background-color: #fff;
+}
+
+.layout-workbench-titlebar {
+  height: 60px;
+  padding: 20px 16px 10px;
+  display: flex;
+}
+
+.layout-workbench-titlebar .input {
+  flex: 1;
+  height: 30px;
+  padding-left: 20px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  border: none;
+  -webkit-app-region: no-drag;
+}
+
+.layout-workbench-titlebar .icon-plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+  border-radius: 4px;
+  color: #888;
+  font-size: 22px;
+  font-weight: 500;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+
+.layout-workbench .user-info {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding: 0 16px;
+  background-color: #1a9cfc;
+}
+
+.layout-workbench .avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.layout-workbench .extra {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 42px;
+  margin-left: 8px;
+  color: #fff;
+}
+
+.layout-workbench .nickname {
+  font-size: 15px;
+}
+
+.layout-workbench .message {
+  font-size: 12px;
+}
+
+.resize-line {
+  width: 1px;
+  background-color: #e9e9e9;
+  cursor: col-resize;
+}
+
+.layout-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+}
+
+.layout-main-titlebar {
+  height: 60px;
+  padding: 20px;
+  font-weight: 500;
+  color: #000;
+  border-bottom: 1px solid #e9e9e9;
+  background-image: url(./assets/group.jpg);
+  background-position: right top;
+  background-size: 90px 60px;
+  background-repeat: no-repeat;
+}
+
+.layout-main-titlebar.win32 {
+  margin-top: 15px;
+}
+
+.layout-main .layout-main-messages {
+  flex: 1;
+  padding: 30px 15px;
+  overflow: auto;
+}
+
+.layout-main .message {
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.layout-main .message:last-child {
+  margin-bottom: 0;
+}
+
+.layout-main .message .text {
+  font-size: 13px;
+  padding: 11px 10px 9px;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #1a9cfc;
+  position: relative;
+  border-color: transparent;
+}
+
+.layout-main .message.you .text {
+  margin-right: 47px;
+  margin-left: 10px;
+}
+
+.layout-main .message.me {
+  flex-direction: row-reverse;
+}
+
+.layout-main .message.me .text {
+  margin-right: 10px;
+  margin-left: 47px;
+}
+
+.layout-main .avatar {
+  width: 36px;
+  height: 36px;
+  margin-top: 1px;
+  border-radius: 50%;
+}
+
+.layout-main .layout-main-toolkit {
+  height: 200px;
+  padding-top: 36px;
+  border-top: 1px solid #e9e9e9;
+  background-image: url(./assets/tools.jpg), url(./assets/time.jpg);
+  background-size: 350px 30px, 50px 35px;
+  background-repeat: no-repeat;
+  background-position: 0 4px, right 0px;
+}
+
+.layout-main .textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-sizing: border-box;
+  padding: 6px 20px 20px;
+  resize: none;
+  background-color: transparent;
+}
