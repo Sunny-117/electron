@@ -2218,3 +2218,8 @@ https://www.electronjs.org/docs/latest/api/menu
 ![](2024-08-19-14-56-25.png)
 
 七牛云对象存储与js-sdk https://portal.qiniu.com/home
+
+# 应用架构
+
+![](2024-08-19-16-33-21.png)
+
