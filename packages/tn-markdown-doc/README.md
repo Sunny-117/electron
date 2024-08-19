@@ -2035,7 +2035,9 @@ https://github.com/electron/electron/issues/7300
 
 ---
 
-### 上下文菜单
+### 上下文菜单(右键菜单)
+
+https://www.electronjs.org/docs/latest/api/menu
 
 使用 Menu 和 MenuItem 来实现菜单
 
@@ -2173,7 +2175,9 @@ https://github.com/electron/electron/issues/7300
 
 ---
 
-### 内置菜单
+### 内置菜单(原生菜单)
+
+预设：https://github.com/carter-thaxton/electron-default-menu/blob/master/index.js
 
 - 菜单配置项过长，略
 
@@ -2210,3 +2214,5 @@ https://github.com/electron/electron/issues/7300
   ```
 
   
+
+![](2024-08-19-14-56-25.png)

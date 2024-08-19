@@ -1,4 +1,4 @@
-const { app, shell } = require('electron')
+const { app, shell, ipcMain } = require('electron')
 
 let template = [{
     label: '文件',
