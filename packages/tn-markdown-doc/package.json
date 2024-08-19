@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "main": "main.mjs",
   "private": true,
+  "author": "Sunny",
   "dependencies": {
     "@electron/remote": "^2.1.2",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -27,7 +28,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "concurrently \"wait-on http://localhost:3000 && electron .\" \"cross-env BROWSER=NONE npm start\""
+    "dev": "concurrently \"wait-on http://localhost:3000 && electron .\" \"cross-env BROWSER=NONE npm start\"",
+    "build": "react-scripts build",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "prepack": "npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +57,24 @@
     "cross-env": "^7.0.3",
     "electron": "^29.2.0",
     "electron-is-dev": "^3.0.1",
-    "wait-on": "^7.2.0"
+    "wait-on": "^7.2.0",
+    "electron-builder": "^24.9.1"
+  },
+  "homepage": "./",
+  "build": {
+    "appId": "cloudDoc",
+    "productName": "云文档",
+    "copyright": "Copyright © 2024-present ${author}",
+    "extends": null,
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "settings/**/*",
+      "package.json",
+      "main.mjs",
+      "./src/menuTemplate.js",
+      "./commonJSModule.js",
+      "./AppWindow.js"
+    ]
   }
 }
