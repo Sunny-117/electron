@@ -1,0 +1,20 @@
+{
+  "name": "os",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --watch index.js --exec 'electron .'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "devtron": "^1.4.0",
+    "electron": "^28.1.0"
+  },
+  "dependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
