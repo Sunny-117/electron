@@ -18,7 +18,7 @@ const { join, basename, extname, dirname } = window.require('path')
 const { ipcRenderer } = window.require('electron')
 const remote = window.require('@electron/remote')
 const Store = window.require('electron-store')
-const fileStore = new Store({ 'name': 'Files Data' })
+const fileStore = new Store({ 'name': 'Files Data1' })
 
 // 这段 hook 放到 hooks 下引入会导致 fs、path 模块无法读取
 const useIpcRenderer = (keyCallbackMap) => {
@@ -56,6 +56,7 @@ function App() {
   const [ searchedFiles, setsearchedFiles ] = useState([])
   const filesArr = objToArr(files)    // 有些要转换前文件格式
   const saveLocation = remote.app.getPath('documents')  // 使用remote.app.getPath() 拿到文件路径
+  console.log(saveLocation, 'saveLocation')
   const activeFile = files[activeFileID]
   const openedFiles = openedFileIDs.map(openID => {
     return files[openID]
@@ -106,9 +107,7 @@ function App() {
   }
   const deleteFile = (id) => {
     if (files[id].isNew) {
-      // delete files[id]
       const { [id]: value , ...afterDelete } = files
-      // 这里如果 setFiles(files) 那 files 根本没变化，不会重新渲染
       setFiles(afterDelete)
     } else {
       fileHelper.deleteFile(files[id].path).then(() => {

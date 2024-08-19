@@ -1672,6 +1672,8 @@ Electron 需求为：文件列表右键子菜单、文件导入、应用菜单�
 
 - electron 版本大于 12，引入 node 报错解决办法
 
+https://github.com/electron/electron/issues/7300
+
 1. 创建 preload 脚本，可以在任意处创建
 
    ```js

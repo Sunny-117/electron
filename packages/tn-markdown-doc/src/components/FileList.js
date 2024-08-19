@@ -78,6 +78,8 @@ const FileList = ({ files, onFileClick, onSaveEdit, onFileDelete }) => {
             setValue(newFile.title)
         }
     }, [files])
+    const isExistTitle = newTitle => files.find(file => file.title === newTitle);
+    const [hasError, setHasError] = useState(false);
     return (
         <ul className='list-group list-group-flush file-list'>
             {
@@ -136,8 +138,17 @@ const FileList = ({ files, onFileClick, onSaveEdit, onFileDelete }) => {
                                         ref={node}
                                         value={value}
                                         placeholder='请输入文件名称'
-                                        onChange={(e) => { setValue(e.target.value) }}
+                                        onChange={(e) => { 
+                                            const newValue = e.target.value;
+                                            if (isExistTitle(newValue)) {
+                                                setHasError(true);
+                                            }else{
+                                                setHasError(false);
+                                            }
+                                            setValue(newValue)
+                                         }}
                                     />
+                                    {hasError && <span style={{color: 'red'}}>该文件名已存在</span>}
                                 </div>
                                 <button
                                     title="button"
