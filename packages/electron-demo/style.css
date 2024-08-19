@@ -1,0 +1,23 @@
+body {
+  padding: 10px 20px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+button {
+  height: 36px;
+  padding: 0 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #42b883;
+  color: #fff;
+  border: none;
+}
+
+button:active,
+button:hover {
+  background-color: #33a06f;
+}
