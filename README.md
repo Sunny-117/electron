@@ -1,4 +1,4 @@
-# 【WIP】 Electron
+# Electron
 
 
 本项目是 [《Electron桌面客户端应用程序开发入门到原理》专栏](https://juejin.cn/column/7400672360453259264) 源码+文章
