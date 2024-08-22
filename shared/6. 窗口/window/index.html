@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 该 meta 内容用于定义该渲染进程的一个安全策略 -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>System info</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="cpu" class="info">
+      <span>CPU:</span>
+      <span>Loading</span>
+    </div>
+    <div id="cpu-arch" class="info">
+      <span>CPU架构:</span>
+      <span>Loading</span>
+    </div>
+    <div id="platform" class="info">
+      <span>平台:</span>
+      <span>Loading</span>
+    </div>
+    <div id="freemem" class="info">
+      <span>剩余内存:</span>
+      <span>Loading</span>
+    </div>
+    <div id="totalmem" class="info">
+      <span>总内存:</span>
+      <span>Loading</span>
+    </div>
+    <script src="./window.js"></script>
+  </body>
+</html>

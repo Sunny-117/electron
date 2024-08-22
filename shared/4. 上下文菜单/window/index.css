@@ -1,0 +1,21 @@
+/* 右键菜单 */
+#menu {
+  width: 125px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  box-shadow: 3px 3px 3px #ccc;
+  position: absolute;
+  display: none;
+}
+
+.menu {
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+.menu:hover {
+  background-color: #ccc;
+}
